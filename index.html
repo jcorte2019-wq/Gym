@@ -120,62 +120,67 @@ const uid=()=>Math.random().toString(36).slice(2,10);
 const X=(name,type,sets,value,rest,notes)=>({id:uid(),name,type,sets,value,rest,notes});
 const R=(day,name,focus,exercises)=>({id:uid(),day,name,focus,exercises});
 const PESO=" Elige un peso con el que las últimas 2 reps cuesten trabajo pero sin perder la técnica.";
+const SMITH=" En la Smith empieza con discos chicos (10 lb por lado) y sube poco a poco. Gira la barra para soltarla y vuelve a engancharla en los ganchos al terminar.";
+const POLEA=" En la máquina de poleas (Precor): ajusta la altura con la perilla azul y el peso con el pasador.";
 const ejemplo=()=>[
  R(1,"Lunes · Fuerza A","Cuerpo completo · pierna y empuje",[
-  X("Calentamiento en caminadora","time",1,300,30,"Camina rápido o trota suave. Sube la inclinación a 3–5 los últimos 2 minutos."),
-  X("Sentadilla goblet con mancuerna","reps",3,12,60,"Sostén una mancuerna vertical pegada al pecho. Pies al ancho de hombros, baja con la espalda recta hasta que los muslos queden paralelos."+PESO),
-  X("Press de pecho en máquina","reps",3,12,60,"Ajusta el asiento para que los agarres queden a la altura del pecho. Empuja sin despegar la espalda del respaldo y regresa lento. Si no hay estación de pecho: press con mancuernas acostado en el banco."+PESO),
-  X("Jalón al pecho en máquina","reps",3,12,60,"Agarre un poco más abierto que los hombros. Jala la barra hacia la parte alta del pecho apretando la espalda y regresa controlado. Alternativa: remo con mancuerna."+PESO),
-  X("Peso muerto rumano con mancuernas","reps",3,12,60,"Rodillas ligeramente flexionadas, lleva la cadera hacia atrás bajando las mancuernas pegadas a las piernas hasta media espinilla. Espalda siempre recta."+PESO),
+  X("Calentamiento en remadora","time",1,300,30,"Ritmo cómodo. Empuja primero con las piernas, luego inclínate un poco atrás y al final jala con los brazos hacia el abdomen."),
+  X("Sentadilla en máquina Smith","reps",4,10,75,"Barra sobre la parte alta de la espalda (no en el cuello), pies un poco adelante de la barra. Baja hasta que los muslos queden paralelos y sube empujando con los talones."+SMITH),
+  X("Press de banca en máquina Smith","reps",3,10,75,"Pon el banco plano bajo la barra para que baje a la altura del pecho. Baja controlado hasta casi tocar el pecho y empuja."+SMITH),
+  X("Jalón al pecho en polea","reps",3,12,60,"Pon la polea arriba con la barra larga. Sentado en el banco o de rodillas, jala la barra hacia la parte alta del pecho apretando la espalda."+POLEA+PESO),
+  X("Curl femoral en máquina","reps",3,12,45,"En la máquina de extensión/curl de piernas (Precor): ajústala en modo curl. El rodillo va arriba de los talones; dobla las rodillas jalando hacia abajo y regresa lento."+PESO),
   X("Press de hombro con mancuernas (sentado en el banco)","reps",3,10,60,"Respaldo del banco vertical. Empuja las mancuernas desde la altura de las orejas hasta arriba sin arquear la espalda."+PESO),
-  X("Plancha","time",3,40,30,"Antebrazos en el piso, cuerpo recto, abdomen y glúteos apretados."),
-  X("Enfriamiento en bicicleta","time",1,300,0,"Pedalea suave y baja el ritmo poco a poco. Después estira piernas y pecho 1 minuto.")
+  X("Leñador en polea","reps",3,12,30,"12 por lado. Polea arriba con un agarre. De lado a la máquina, jala en diagonal de arriba hacia la cadera contraria girando el torso. Abdomen apretado."+POLEA),
+  X("Enfriamiento en caminadora","time",1,300,0,"Camina tranquilo. Después estira piernas y pecho 1 minuto.")
  ]),
  R(2,"Martes · Fuerza B","Cuerpo completo · espalda y glúteo",[
-  X("Calentamiento en elíptica","time",1,300,30,"Ritmo moderado, usa también los brazos."),
+  X("Calentamiento en AMT o elíptica","time",1,300,30,"Ritmo moderado, usa también los brazos."),
+  X("Peso muerto rumano con mancuernas","reps",3,12,60,"Rodillas un poco flexionadas, lleva la cadera hacia atrás bajando las mancuernas pegadas a las piernas hasta media espinilla. Espalda siempre recta."+PESO),
+  X("Remo sentado en polea baja","reps",3,12,60,"Polea abajo con el agarre en V. Siéntate en el banco o en el piso con las piernas un poco dobladas. Jala hacia el abdomen juntando los omóplatos."+POLEA+PESO),
+  X("Press inclinado con mancuernas","reps",3,12,60,"Respaldo del banco a unos 30–45°. Empuja las mancuernas hacia arriba y baja controlado."+PESO),
   X("Zancadas con mancuernas","reps",3,10,60,"10 por pierna. Paso largo, baja la rodilla de atrás casi al piso. La rodilla de enfrente no pasa la punta del pie."+PESO),
-  X("Remo con mancuerna apoyado en el banco","reps",3,12,60,"12 por brazo. Rodilla y mano en el banco, espalda plana. Jala la mancuerna hacia la cadera apretando la espalda."+PESO),
-  X("Press de pecho con mancuernas en banco","reps",3,12,60,"Acostado en el banco, baja las mancuernas a los lados del pecho con los codos a unos 45° y empuja hacia arriba."+PESO),
-  X("Puente de glúteo con mancuerna (espalda en el banco)","reps",3,15,60,"Parte alta de la espalda apoyada en el banco, mancuerna sobre la cadera. Sube la cadera apretando glúteos y aguanta 1 segundo arriba."+PESO),
+  X("Face pull con cuerda","reps",3,15,45,"Polea a la altura de la cara con la cuerda. Jala hacia tu cara abriendo los codos hacia afuera y arriba. Excelente para hombros y postura. Peso ligero."+POLEA),
   X("Curl de bíceps con mancuernas","reps",3,12,45,"Codos pegados al cuerpo, sube sin balancearte y baja lento."+PESO),
-  X("Extensión de tríceps en polea o con mancuerna","reps",3,12,45,"En la polea de la máquina: codos pegados, empuja hacia abajo. Sin polea: una mancuerna con ambas manos detrás de la cabeza."+PESO),
-  X("Enfriamiento en caminadora","time",1,300,0,"Camina tranquilo. Después estira espalda y piernas 1 minuto.")
+  X("Tríceps con cuerda en polea","reps",3,12,45,"Polea arriba con la cuerda. Codos pegados a los lados, empuja hacia abajo y abre la cuerda al final."+POLEA+PESO),
+  X("Enfriamiento en bicicleta","time",1,300,0,"Pedalea suave. Después estira espalda y piernas 1 minuto.")
  ]),
- R(3,"Miércoles · Intervalos + circuito","Cuerpo completo · cardio y resistencia",[
+ R(3,"Miércoles · Intervalos + circuito","Cuerpo completo · cardio y quema",[
   X("Calentamiento en bicicleta","time",1,240,30,"Pedaleo suave subiendo poco a poco la resistencia."),
   X("Sprints en bicicleta","time",6,30,60,"30 s pedaleando lo más fuerte que puedas con resistencia media-alta. En el descanso sigue pedaleando muy suave."),
+  X("Golpes con balón medicinal","reps",3,12,40,"Sube el balón por arriba de la cabeza y azótalo contra el piso con fuerza, doblando un poco las rodillas. Usa un balón que no rebote mucho."),
   X("Sentadilla con press de hombro (mancuernas)","reps",3,12,45,"Mancuernas a la altura de los hombros. Baja en sentadilla y al subir empuja las mancuernas arriba en un solo movimiento."+PESO),
-  X("Remo sentado en máquina (polea baja)","reps",3,12,45,"Pecho alto, jala el agarre hacia el abdomen juntando los omóplatos. Alternativa: remo con mancuernas inclinado."+PESO),
+  X("Remadora rápida","time",4,60,45,"1 minuto remando fuerte, con ritmo y potencia de piernas. Respira en cada jalón."),
   X("Lagartijas","reps",3,12,45,"Cuerpo recto. Si cuesta, apoya las manos en el banco o las rodillas en el piso."),
-  X("Swing con mancuerna","reps",3,15,45,"Sujeta una mancuerna con ambas manos. Empuja la cadera hacia atrás y luego adelante con fuerza para subirla a la altura del pecho. La fuerza viene de la cadera, no de los brazos."+PESO),
   X("Escaladores (mountain climbers)","time",3,30,30,"Manos en el piso o en el banco, lleva las rodillas al pecho alternando rápido."),
   X("Enfriamiento en elíptica","time",1,300,0,"Ritmo muy suave. Después estira 1 minuto.")
  ]),
- R(4,"Jueves · Fuerza C","Cuerpo completo · pierna a una pierna y hombro",[
+ R(4,"Jueves · Fuerza C","Cuerpo completo · pierna y hombro",[
   X("Calentamiento en caminadora inclinada","time",1,300,30,"Inclinación 6–10, camina a ritmo cómodo."),
   X("Sentadilla búlgara con pie en el banco","reps",3,10,60,"10 por pierna. Empeine de atrás sobre el banco, mancuernas a los lados. Baja recto, peso en la pierna de enfrente."+PESO),
-  X("Press inclinado con mancuernas","reps",3,12,60,"Respaldo del banco a unos 30–45°. Empuja las mancuernas hacia arriba y baja controlado."+PESO),
-  X("Jalón al pecho agarre cerrado","reps",3,12,60,"En la máquina, manos juntas o agarre neutro. Jala hacia el pecho bajando los hombros."+PESO),
-  X("Subidas al banco con mancuernas (step-up)","reps",3,10,60,"10 por pierna. Sube empujando con el talón de la pierna que está arriba, sin impulsarte con la de abajo."+PESO),
+  X("Press de banca con mancuernas","reps",3,12,60,"Acostado en el banco plano, baja las mancuernas a los lados del pecho con los codos a unos 45° y empuja hacia arriba."+PESO),
+  X("Jalón al pecho agarre cerrado","reps",3,12,60,"Polea arriba con el agarre en V. Jala hacia el pecho bajando los hombros."+POLEA+PESO),
+  X("Extensión de piernas en máquina","reps",3,12,45,"En la máquina de extensión/curl (Precor) en modo extensión. El rodillo va al frente de los tobillos; extiende las rodillas y baja lento."+PESO),
   X("Elevaciones laterales con mancuernas","reps",3,12,45,"Codos un poco doblados, sube los brazos a los lados hasta la altura de los hombros. Peso ligero."),
-  X("Crunch en el piso o en banco","reps",3,15,30,"Sube los hombros apretando el abdomen, sin jalar el cuello."),
-  X("Enfriamiento en bicicleta","time",1,300,0,"Pedalea suave. Después estira cadera y hombros 1 minuto.")
+  X("Plancha","time",3,40,30,"Antebrazos en el tapete, cuerpo recto, abdomen y glúteos apretados."),
+  X("Enfriamiento en remadora","time",1,300,0,"Rema suave y lento. Después estira cadera y hombros 1 minuto.")
  ]),
- R(5,"Viernes · Fuerza D","Cuerpo completo · máquina y fuerza total",[
-  X("Calentamiento en elíptica","time",1,300,30,"Ritmo moderado."),
+ R(5,"Viernes · Fuerza D","Cuerpo completo · fuerza total",[
+  X("Calentamiento en AMT o elíptica","time",1,300,30,"Ritmo moderado."),
   X("Peso muerto con mancuernas","reps",3,10,75,"Mancuernas al frente de las piernas. Baja llevando la cadera atrás y doblando rodillas, espalda recta, y sube empujando el piso."+PESO),
-  X("Press de pecho en máquina","reps",3,10,60,"Un poco más de peso que el lunes si te sentiste bien."+PESO),
-  X("Remo sentado en máquina","reps",3,10,60,"Pecho alto, junta omóplatos al jalar."+PESO),
-  X("Extensión de piernas en máquina","reps",3,12,45,"Si tu máquina tiene estación de piernas: extiende las rodillas y baja lento. Alternativa: sentadilla goblet."+PESO),
+  X("Press de banca en máquina Smith","reps",3,8,75,"Un poco más de peso que el lunes si te sentiste bien."+SMITH),
+  X("Remo con mancuerna apoyado en el banco","reps",3,10,60,"10 por brazo. Rodilla y mano en el banco, espalda plana. Jala la mancuerna hacia la cadera."+PESO),
+  X("Subidas al banco con mancuernas (step-up)","reps",3,10,60,"10 por pierna. Sube empujando con el talón de la pierna que está arriba."+PESO),
   X("Press Arnold con mancuernas","reps",3,10,60,"Sentado en el banco. Empieza con las palmas hacia ti y gíralas hacia afuera mientras empujas arriba."+PESO),
-  X("Plancha lateral","time",3,30,30,"30 s por lado (cambia de lado a la mitad del tiempo o haz cada lado en una serie)."),
+  X("Curl femoral en máquina","reps",3,12,45,"Modo curl en la máquina de piernas. Baja lento."+PESO),
+  X("Plancha lateral","time",3,30,30,"30 s por lado (cambia de lado en cada serie)."),
   X("Enfriamiento en caminadora","time",1,300,0,"Camina suave. Después estira 1 minuto.")
  ]),
  R(6,"Sábado · Cardio + core","Cuerpo completo · más ligero",[
-  X("Caminadora inclinada","time",1,1200,60,"20 minutos. Inclinación 8–12 y velocidad a la que puedas hablar con algo de esfuerzo."),
-  X("Sentadilla con peso corporal","reps",2,20,30,"Ritmo constante, buena técnica."),
-  X("Lagartijas","reps",2,12,30,"En el piso o con manos en el banco."),
-  X("Bicho muerto (dead bug)","reps",2,12,30,"Boca arriba, brazos y piernas arriba. Baja brazo y pierna contraria sin despegar la espalda baja del piso."),
+  X("Caminadora inclinada","time",1,900,45,"15 minutos. Inclinación 8–12 y velocidad a la que puedas hablar con algo de esfuerzo."),
+  X("Remadora a ritmo constante","time",1,300,45,"5 minutos a ritmo moderado y parejo."),
+  X("Golpes con balón medicinal","reps",2,15,30,"Arriba de la cabeza y al piso con fuerza."),
+  X("Leñador en polea","reps",2,12,30,"12 por lado, girando el torso."+POLEA),
+  X("Bicho muerto (dead bug)","reps",2,12,30,"Boca arriba en el tapete. Baja brazo y pierna contraria sin despegar la espalda baja del piso."),
   X("Plancha","time",2,45,30,"Cuerpo recto, abdomen apretado."),
   X("Elíptica suave","time",1,360,0,"6 minutos de ritmo cómodo para cerrar.")
  ]),
@@ -183,13 +188,13 @@ const ejemplo=()=>[
   X("Caminata en caminadora","time",1,900,30,"15 minutos de caminata tranquila, sin inclinación o muy poca."),
   X("Bicicleta suave","time",1,600,30,"10 minutos con poca resistencia."),
   X("Estiramiento de piernas (cuádriceps y femorales)","time",2,60,10,"30 s cada pierna. Sin rebotes."),
-  X("Estiramiento de cadera y glúteo","time",2,60,10,"Sentado o en el banco, cruza el tobillo sobre la rodilla contraria e inclínate un poco. 30 s por lado."),
-  X("Estiramiento de pecho y hombros","time",2,60,10,"Brazo apoyado en una pared o máquina, gira el cuerpo hacia el lado contrario. 30 s por lado."),
-  X("Rotaciones de espalda (gato-vaca)","time",2,60,10,"En cuatro puntos, arquea y redondea la espalda lento con la respiración."),
+  X("Estiramiento de cadera y glúteo","time",2,60,10,"Sentado en el banco, cruza el tobillo sobre la rodilla contraria e inclínate un poco. 30 s por lado."),
+  X("Estiramiento de pecho y hombros","time",2,60,10,"Brazo apoyado en la máquina de poleas, gira el cuerpo hacia el lado contrario. 30 s por lado."),
+  X("Rotaciones de espalda (gato-vaca)","time",2,60,10,"En cuatro puntos sobre el tapete, arquea y redondea la espalda lento con la respiración."),
   X("Respiración y estiramiento libre","time",1,180,0,"Acostado, respira profundo y estira lo que sientas tenso.")
  ])
 ];
-const SEEDV=2;
+const SEEDV=3;
 // ---------- Estado y guardado ----------
 let S={routines:[],history:[]};
 let db=null, docRef=null, saveTimer=null, syncMsg="Guardado en este teléfono";
@@ -299,12 +304,22 @@ const ANIM={
  schest:{dur:3200,props:{post:58},A:P(ST,{e1:[78,60],w1:[60,62]}),B:P(ST,{h:[103,38],n:[102,52],e1:[80,60],w1:[60,62]})},
  catcow:{dur:3000,A:{w1:[132,177],e1:[132,155],n:[132,132],h:[142,148],m:[106,116],p:[80,134],k1:[80,176],a1:[50,176],w2:[134,177],e2:[134,155],k2:[82,176],a2:[52,176]},
    B:{w1:[132,177],e1:[132,155],n:[132,132],h:[146,122],m:[106,146],p:[80,134],k1:[80,176],a1:[50,176],w2:[134,177],e2:[134,155],k2:[82,176],a2:[52,176]}},
+ rower:{dur:1800,props:{rower:1},A:{p:[72,150],n:[94,104],h:[99,93],k1:[100,120],a1:[124,148],k2:[98,122],a2:[122,149],e1:[112,118],w1:[126,126],e2:[110,119],w2:[124,127]},
+   B:{p:[50,150],n:[38,103],h:[35,91],k1:[86,146],a1:[124,150],k2:[85,147],a2:[122,151],e1:[30,128],w1:[58,124],e2:[32,129],w2:[56,125]}},
+ smithsq:{dur:2400,db:"plate",props:{post:140},A:P(ST,both({e1:[112,70],w1:[98,50]})),
+   B:P(ST,both({p:[78,128],n:[104,80],h:[110,68],k1:[110,140],a1:[102,178],k2:[108,141],a2:[100,178],e1:[118,98],w1:[102,78]}))},
+ smithbench:{dur:2400,db:"plate",props:{bench:[35,135,140],post:63},A:P(LIE,both({e1:[62,104],w1:[63,76]})),B:P(LIE,both({e1:[78,148],w1:[64,124]}))},
+ legcurl:{dur:2200,props:SEATP,A:P(SEAT,both({e1:[100,98],w1:[108,122],k1:[128,124],a1:[170,118],k2:[126,125],a2:[168,119]})),B:P(SEAT,both({e1:[100,98],w1:[108,122],k1:[128,124],a1:[122,168],k2:[126,125],a2:[120,169]}))},
+ facepull:{dur:2000,props:{cable:[176,42],post:176},A:P(ST,both({e1:[124,52],w1:[150,48]})),B:P(ST,both({e1:[84,44],w1:[106,36]}))},
+ chop:{dur:1800,front:1,props:{cable:[10,-10],post:10},A:P(FRONT,{e1:[76,36],w1:[60,16],e2:[80,38],w2:[62,18]}),B:P(FRONT,{e1:[118,92],w1:[136,114],e2:[116,94],w2:[134,116]})},
+ slam:{dur:1100,db:"ball",A:P(ST,both({e1:[103,24],w1:[104,-2]})),B:P(ST,both({p:[82,120],n:[118,82],h:[128,74],k1:[110,138],a1:[102,178],k2:[108,139],a2:[100,178],e1:[128,118],w1:[127,146]}))},
  breathe:{dur:4000,A:{h:[40,168],n:[54,172],p:[104,174],k1:[140,174],a1:[176,174],k2:[140,175],a2:[176,175],e1:[72,176],w1:[90,176],e2:[72,177],w2:[90,177]},
    B:{h:[40,168],n:[54,172],m:[79,168],p:[104,174],k1:[140,174],a1:[176,174],k2:[140,175],a2:[176,175],e1:[72,176],w1:[90,176],e2:[72,177],w2:[90,177]}}
 };
 const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
 function animFor(name){
  const n=norm(name||""),has=(...k)=>k.some(x=>n.includes(x));
+ if(has("respiracion"))return"breathe";
  if(has("estiramiento","estira")){
   if(has("cadera","gluteo"))return"shiph";
   if(has("pecho","hombro"))return"schest";
@@ -312,6 +327,14 @@ function animFor(name){
  }
  if(has("gato","cat-cow"))return"catcow";
  if(has("respiracion"))return"breathe";
+ if(has("remadora","maquina de remo"))return"rower";
+ if(has("smith")&&has("sentadilla"))return"smithsq";
+ if(has("smith"))return"smithbench";
+ if(has("curl femoral","curl de pierna"))return"legcurl";
+ if(has("face pull"))return"facepull";
+ if(has("lenador"))return"chop";
+ if(has("balon medicinal","slam"))return"slam";
+ if(has("amt"))return"ellip";
  if(has("sprint"))return"sprint";
  if(has("bici"))return"bike";
  if(has("eliptica"))return"ellip";
@@ -372,6 +395,7 @@ function figInner(key,t){
  if(pr.tread){s+=`<rect x="40" y="177" width="130" height="7" rx="3" fill="${M}"/>`+L([158,180],[150,92],M,4)+L([150,92],[128,94],M,4)}
  if(pr.ellip){s+=L([50,180],[150,180],M,5)+L([150,180],[142,96],M,4)+L([142,104],q.w1,M,3)+L([142,104],q.w2,M,3)}
  if(A.bike){const c=q._c;s+=`<circle cx="148" cy="150" r="17" fill="none" stroke="${M}" stroke-width="4"/>`+L([78,112],[98,112],M,5)+L([88,112],c,M,4)+L(c,[134,94],M,4)+L([134,94],[140,82],M,4)+L([78,180],[160,180],M,5)+L(c,[148,150],M,3)}
+ if(pr.rower){s+=L([10,160],[178,160],M,5)+`<circle cx="164" cy="138" r="17" fill="none" stroke="${M}" stroke-width="4"/>`+L([124,140],[124,160],M,4)+L([150,136],q.w1,"#9aa1a8",1.5)+L([q.p[0]-10,q.p[1]+6],[q.p[0]+10,q.p[1]+6],M,5)}
  if(pr.post!=null){s+=L([pr.post,-12],[pr.post,181],M,5)}
  if(pr.cable){s+=L(pr.cable,q.w1,"#9aa1a8",1.5)}
  if(pr.bench){const[x1,x2,y]=pr.bench;s+=L([x1,y],[x2,y],M,7)+L([x1+6,y],[x1+6,181],M,4)+L([x2-6,y],[x2-6,181],M,4)}
@@ -392,6 +416,8 @@ function figInner(key,t){
  if(q.e1)s+=L(sh1,q.e1,C,7)+L(q.e1,q.w1,C,7);
  if(A.db==="both"||A.db==="one")s+=DB(q.w1);
  if(A.db==="single")s+=DB([(q.w1[0]+(q.w2||q.w1)[0])/2,(q.w1[1]+(q.w2||q.w1)[1])/2]);
+ if(A.db==="plate")s+=`<circle cx="${q.w1[0].toFixed(1)}" cy="${q.w1[1].toFixed(1)}" r="11" fill="#2a2f34" stroke="#c6f432" stroke-width="3"/>`;
+ if(A.db==="ball")s+=`<circle cx="${q.w1[0].toFixed(1)}" cy="${(q.w1[1]+6).toFixed(1)}" r="11" fill="#e8892c"/>`;
  if(A.bike)s+=`<circle cx="${q.a1[0].toFixed(1)}" cy="${q.a1[1].toFixed(1)}" r="3" fill="#c6f432"/>`;
  return s;
 }
@@ -537,7 +563,7 @@ function sheet(html){const m=document.createElement("div");m.className="modal";m
 function closeSheet(){const m=$("#modal");if(m)m.remove()}
 
 // ---------- Modo quemar grasa, voz y utilidades ----------
-const isCardio=e=>["walk","ellip","bike","sprint"].includes(animFor(e.name));
+const isCardio=e=>["walk","ellip","bike","sprint","rower"].includes(animFor(e.name));
 function exsFor(r){
   if(!S.burn)return r.exercises;
   const ex=r.exercises.map(e=>isCardio(e)||animFor(e.name)==="breathe"||/estira/i.test(e.name)?e:Object.assign({},e,{rest:Math.max(20,Math.round(e.rest*0.65))}));
